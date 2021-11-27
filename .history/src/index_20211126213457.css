@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --clr-primary: hsl(172, 67%, 45%);
+  --clr-dark-cyan: hsl(183, 100%, 15%);
+  --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-light-grayish-cyan2: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Mono", sans-serif;
+  background: var(--clr-light-grayish-cyan);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  max-height: 100vh;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  padding: 2rem;
+}
+.attribution a {
+  color: var(--clr-primary);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-white);
+  height: 30rem;
+  width: 70%;
+  margin: auto;
+  padding: 2em;
+  border-radius: 1rem;
+}
+.left-side, .right-side {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+.left-side{
+  background-color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+}
+.right-side{
+  background-color: var(--clr-dark-cyan);
+}
+
+.tipper-title {
+  font-weight: 700;
+  color: var(--clr-dark-grayish-cyan);
+}
+
+.bill-input {
+  width: 90%;
+  height: 2.5rem;
+  border: none;
+}
+
+@media screen and (max-width: 700px) {
+  .App {
+    display: flex;
+    flex-direction: rows;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .container {
+    background-color: var(--clr-white);
+    height: 30rem;
+    width: 100%;
+    margin: auto;
+  }
+  .left-side, .right-side {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.left-side{
+  background-color: whites;
+}
+.right-side{
+  background-color: var(--clr-dark-cyan);
+}
+}
