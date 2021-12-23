@@ -64,8 +64,13 @@ function App() {
       // window.alert("People property cannot be 0");
       // setPeople(1);
     } else {
-      setAmount(bill * (tip/100));
-      setTotal(bill+amount);
+      if (isNaN(bill) || isNaN(people)) {
+        setAmount(0);
+        setTotal(0);
+      } else {
+        setAmount((bill * (tip / 100)) / +people);
+        setTotal((bill + amount * people) / people);
+      }
     }
   };
 
