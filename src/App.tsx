@@ -64,8 +64,8 @@ function App() {
       // window.alert("People property cannot be 0");
       // setPeople(1);
     } else {
-      setAmount((bill * tip) / 100 / people);
-      setTotal((bill + tip) / people);
+      setAmount(bill * (tip/100));
+      setTotal(bill+amount);
     }
   };
 
