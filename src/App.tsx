@@ -61,8 +61,9 @@ function App() {
 
   const calculate = () => {
     if (people === 0) {
-      // window.alert("People property cannot be 0");
-      // setPeople(1);
+      // setTimeout(() => {
+      //   setPeople(1);
+      // }, 1000);
     } else {
       if (isNaN(bill) || isNaN(people)) {
         setAmount(0);
@@ -83,6 +84,7 @@ function App() {
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
+      <button className="btn"></button>
       <Tipper
         bill={bill}
         people={people}

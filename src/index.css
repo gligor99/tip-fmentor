@@ -10,6 +10,26 @@
   --clr-white: hsl(0, 0%, 100%);
 }
 
+.light-theme {
+  --clr-primary: hsl(172, 67%, 45%);
+  --clr-dark-cyan: hsl(183, 100%, 15%);
+  --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-light-grayish-cyan2: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+.dark-theme {
+  --clr-primary: hsl(183, 100%, 15%);
+  --clr-dark-cyan: hsl(172, 67%, 45%);
+  --clr-dark-grayish-cyan: hsl(0, 0%, 100%);
+  --clr-dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-light-grayish-cyan2: hsl(189, 41%, 97%);
+  --clr-white: hsl(186, 14%, 43%);
+}
+
 *,
 ::after,
 ::before {
@@ -83,6 +103,7 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 2px solid transparent;
 }
 
 input {
@@ -107,7 +128,18 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.no-of-people {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-no-people {
+  border: 2px solid transparent;
+}
+
 .error {
+  width: max-content;
   font-size: 0.8rem;
   font-weight: 700;
   color: orange;
@@ -131,6 +163,7 @@ input::-webkit-inner-spin-button {
   font-family: "Space Mono", sans-serif;
   color: var(--clr-white);
   transition: 0.2s ease-out;
+  cursor: pointer;
 }
 .custom-tip {
   background-color: var(--clr-light-grayish-cyan2);
@@ -187,6 +220,7 @@ input::-webkit-inner-spin-button {
   color: var(--clr-dark-cyan);
   border: none;
   transition: 0.2s ease-out;
+  cursor: pointer;
 }
 .reset-btn:hover {
   background-color: var(--clr-light-grayish-cyan);

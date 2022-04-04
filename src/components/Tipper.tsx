@@ -57,7 +57,7 @@ const Tipper: React.FC<Props> = ({
             </button>
             <button
               className="percentage-btn"
-              value="25"
+              value="50"
               onClick={handleButton}
             >
               50%
@@ -71,15 +71,20 @@ const Tipper: React.FC<Props> = ({
               onChange={handleCustomTip}
             />
           </div>
-          <label htmlFor="no-of-people">Number of people</label>
-          {people === 0 ? <span className="error">Can't be zero !</span> : null}
+          <div className="no-of-people">
+            <label htmlFor="no-of-people">Number of people</label>
+            {people === 0 ? (
+              <span className="error">Can't be zero !</span>
+            ) : null}
+          </div>
+
           <div
             className={people === 0 ? "input-div error-border" : "input-div"}
           >
             <img className="input-icon" src={iconPeople} alt="personIcon" />
             <input
               type="number"
-              min={0}
+              min="1"
               placeholder="0"
               value={people}
               onChange={handlePeople}
